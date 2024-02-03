@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text-color {
+        color: magenta;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child child2" onclick="toggleClass()">child2</div>
+      <div class="child">child3</div>
+
+      <img src="" alt="image is not loading" />
+    </div>
+    <!-- ------------------ -->
+    <script>
+      let photoURL =
+        'https://images.pexels.com/photos/17685567/pexels-photo-17685567/free-photo-of-a-group-of-people-riding-surfboards-in-the-ocean.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+
+      let parent = document.getElementsByClassName('parent')[0];
+      let child2 = document.getElementsByClassName('child')[1];
+      let img = document.getElementsByTagName('img')[0];
+      //   child2.classList.add('text-color');
+      //   child2.classList.remove('text-color');
+      //   console.log(img);
+
+      child2.setAttribute('id', 'child2-id');
+      img.setAttribute('src', photoURL);
+      img.setAttribute('alt', 'Image not loading');
+      img.removeAttribute('alt');
+      //   console.log(parent.parentElement.parentElement);
+      //   console.log(parent.firstElementChild);
+      //   console.log(parent.lastElementChild);
+      //   console.log(parent.childElementCount);
+      //   console.log(parent.children.length);
+      console.log(img.getAttribute('src'));
+
+      //   console.log(child2.previousElementSibling);
+      //   console.log(child2.classList);
+      //   console.log(child2.classList.contains('text-color'));
+      function toggleClass() {
+        child2.classList.toggle('text-color');
+      }
+    </script>
+  </body>
+</html>

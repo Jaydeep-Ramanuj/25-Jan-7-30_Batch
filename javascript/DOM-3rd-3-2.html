@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">parent</div>
+    <script>
+      let parent = document.getElementsByClassName('parent')[0];
+      let child = document.createElement('div');
+
+      child.innerText = 'something';
+      console.log(child);
+      parent.append(child);
+    </script>
+  </body>
+</html>

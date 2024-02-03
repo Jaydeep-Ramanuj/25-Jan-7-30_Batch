@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.parent .child{
+/* color: aquamarine; */
+}
+
+</style>
+</head>
+<body>
+            <div class="parent">
+                <div class="child">child1</div>
+                <div class="child">child2</div>
+                <div class="child" id="child3">child3
+                    <div class="sub-child">sub-child1</div>
+                    <div class="sub-child">sub-child2</div>
+                    <div class="sub-child">This</div>     
+                </div>
+            </div>
+            <p>This is p tag</p>
+            <p>This is second p tag</p>
+            <p>This is third p tag</p>
+
+            <script>
+let thisVar = document.getElementsByClassName('sub-child')[2]; 
+// thisVar.innerText='Rakesh'
+// console.log(thisVar);
+
+
+let Child3=document.getElementById('child3');
+// Child3.innerText='Milan'
+// console.log(Child3);
+
+
+let divTags=document.getElementsByTagName('p')
+// console.log(divTags);
+
+
+
+let thisElement = document.querySelector('.parent .child')
+
+// thisElement.innerText='Dhyanesh'
+let userName='Milan';
+
+thisElement.innerHTML=`<i> Dhyanesh's friend ${userName} says "This is my classroom"</i>`
+// thisElement.innerHTML=`<p>This is p tag</p>
+//             <p>This is second p tag</p>
+//             <p>This is third p tag</p>`
+
+console.log(thisElement);
+
+
+// console.log(Child3);
+
+// Child3.style.color='red';
+
+
+let customColor='aquamarine';
+
+
+// child3.style.backgroundColor='red';
+
+let child3Style =`color: ${customColor}; background-color: white; font-size:26px`
+
+child3.style.cssText = child3Style
+
+
+let textInThatElement=thisElement.innerText;
+
+console.log(textInThatElement);
+
+            </script>
+</body>
+</html>
+
+
