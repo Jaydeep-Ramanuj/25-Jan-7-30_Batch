@@ -10,10 +10,13 @@
     <script>
       let parent = document.getElementsByClassName('parent')[0];
       let child = document.createElement('div');
+      let child2 = document.createElement('div');
 
       child.innerText = 'something';
+      child2.innerText = 'child2';
       console.log(child);
       parent.append(child);
+      parent.prepend(child2);
     </script>
   </body>
 </html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      #main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      .card {
+        /* height: 300px; */
+        width: 200px;
+        border-radius: 12px;
+        padding: 10px;
+        background-color: whitesmoke;
+        word-wrap: break-word;
+        transition: all 300ms;
+      }
+      .card:hover {
+        transform: scale(1.1) translateY(-10px);
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+          rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+      img {
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .card-info {
+        padding: 10px;
+      }
+      .name {
+        font-weight: 600;
+      }
+      .name,
+      .email,
+      .post {
+        margin-top: 5px;
+      }
+      .email {
+        font-size: 0.6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="username"></label>
+      <input type="text" placeholder="Enter your name" id="username" required />
+      <label for="profession"></label>
+      <input
+        type="text"
+        placeholder="Enter your profession"
+        id="profession"
+        required
+      />
+      <label for="email"></label>
+      <input
+        type="email"
+        placeholder="Enter your Email Id"
+        id="email"
+        required
+      />
+      <label for="url"></label>
+      <input type="url" placeholder="Enter your photo url" id="url" required />
+      <button>Submit</button>
+    </form>
+    <div id="main">
+      <!-- <div class="card">
+        <img src="" alt="" />
+        <div class="card-info">
+          <div class="name"></div>
+          <div class="post"></div>
+          <div class="email"></div>
+        </div>
+      </div> -->
+    </div>
+    <script>
+      function makeCard(name, post, email, url) {
+        let reviewerName = name;
+        let reviewerProfession = post;
+        let reviewerEmail = email;
+        let imgSrc = url;
+
+        let mainElement = document.getElementById('main');
+
+        let cardTemplate = `
+        <img src="${url}" alt="" />
+        <div class="card-info">
+          <div class="name">${reviewerName}</div>
+          <div class="post">${reviewerProfession}</div>
+          <div class="email">${reviewerEmail}</div>
+        </div>
+       `;
+        let newCard = document.createElement('div');
+        newCard.setAttribute('class', 'card');
+
+        newCard.innerHTML = cardTemplate;
+        // console.log(newCard);
+
+        // let imgElement = document.createElement('img');
+        // imgElement.setAttribute('src', imgSrc);
+
+        // let cardInfoElement = document.createElement('div');
+        // cardInfoElement.setAttribute('class', 'card-info');
+
+        // let nameElement = document.createElement('div');
+        // nameElement.setAttribute('class', 'name');
+        // nameElement.innerText = reviewerName;
+
+        // let professionElement = document.createElement('div');
+        // professionElement.setAttribute('class', 'post');
+        // professionElement.innerText = reviewerProfession;
+
+        // let emailElement = document.createElement('div');
+        // emailElement.setAttribute('class', 'email');
+        // emailElement.innerText = reviewerEmail;
+
+        // cardInfoElement.append(nameElement);
+        // cardInfoElement.append(professionElement);
+        // cardInfoElement.append(emailElement);
+
+        // newCard.append(imgElement);
+        // newCard.append(cardInfoElement);
+
+        // console.log(newCard);
+        mainElement.append(newCard);
+      }
+
+      //   makeCard(
+      //     'Milan Kateshiya',
+      //     'Cool Front End Developer',
+      //     'milanCool.developer@gmail.com',
+      //     'https://images.pexels.com/photos/3930111/pexels-photo-3930111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      //   );
+      //   makeCard(
+      //     'Dhyanesh Joshi',
+      //     'Smart Front End Developer',
+      //     'dhyanesh.developer@gmail.com',
+      //     'https://images.pexels.com/photos/11704119/pexels-photo-11704119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      //   );
+      //   makeCard(
+      //     'Rakesh Dangar',
+      //     'Super Smart Front End Developer',
+      //     'rakesh.developer@gmail.com',
+      //     'https://images.pexels.com/photos/2981144/pexels-photo-2981144.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      //   );
+
+      let nameInput = document.getElementById('username');
+      let professionInput = document.getElementById('profession');
+      let emailInput = document.getElementById('email');
+      let urlInput = document.getElementById('url');
+      let submitBtn = document.getElementsByTagName('button')[0];
+
+      submitBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        let username = nameInput.value;
+        let profession = professionInput.value;
+        let email = emailInput.value;
+        let photoUrl = urlInput.value;
+
+        makeCard(username, profession, email, photoUrl);
+      });
+    </script>
+  </body>
+</html>
