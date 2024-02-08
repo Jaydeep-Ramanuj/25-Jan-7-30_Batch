@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+      }
+
+      .text-grey {
+        color: var(--color-grey);
+        background-color: var(--color-grey);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="username">Username</label
+      ><input
+        type="text"
+        name=""
+        id="username"
+        placeholder="Enter your username"
+      />
+      <label for="email">Email</label
+      ><input type="email" name="" id="email" placeholder="Enter your email" />
+      <label for="password">Password</label
+      ><input
+        type="password"
+        name=""
+        id="password"
+        placeholder="Enter your password"
+      />
+      <button>Submit</button>
+      <button disabled>GO</button>
+    </form>
+    <script>
+      let submitBtn = document.getElementsByTagName('button')[0];
+      let goBtn = document.getElementsByTagName('button')[1];
+      let username = document.getElementById('username');
+      let email = document.getElementById('email');
+      let password = document.getElementById('password');
+
+      submitBtn.addEventListener('click', function (event) {
+        // console.log(username.value);
+        // console.log(email.value);
+        // console.log(password.value);
+
+        // submitBtn.onclick = function () {};
+
+        event.preventDefault();
+
+        if (
+          !(username.value == '') &&
+          !(email.value == '') &&
+          !(password.value == '')
+        ) {
+          goBtn.classList.remove('text-grey');
+          goBtn.removeAttribute('disabled');
+          //   console.log('username,email and password are not null');
+        }
+      });
+    </script>
+  </body>
+</html>

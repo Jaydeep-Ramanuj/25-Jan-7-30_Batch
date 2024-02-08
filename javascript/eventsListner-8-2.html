@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+
+    <div class="box"></div>
+    <script>
+      let clickBtn = document.getElementsByTagName('button')[0];
+      let clickBtn2 = document.getElementsByTagName('button')[1];
+      let box = document.getElementsByClassName('box')[0];
+      //   console.log(clickBtn);
+
+      //   clickBtn.addEventListener('click', function () {
+      //     // console.log('Button 1 clicked');
+      //     // clickBtn.innerText = 'clicked';
+      //     clickBtn.style.width = '200px';
+      //   });
+
+      clickBtn.addEventListener('click', function (event) {
+        // event.preventDefault();
+        console.log('Button 1 clicked');
+      });
+      clickBtn.addEventListener('focus', function (event) {
+        // event.preventDefault();
+        console.log('Button 1 focused');
+      });
+      clickBtn.addEventListener('dblclick', function (event) {
+        // event.preventDefault();
+        console.log('Button 1 double clicked');
+      });
+      document.addEventListener('mouseover', function (event) {
+        // event.preventDefault();
+        // console.log('Button 1 mouseover');
+        console.log(event.target);
+      });
+      clickBtn.addEventListener('focusout', function (event) {
+        // event.preventDefault();
+        console.log('Button 1 focus out');
+      });
+      document.addEventListener('keypress', function (event) {
+        // event.preventDefault();
+        console.log('keypressed on document');
+        console.log(event.key);
+      });
+      document.addEventListener('scroll', function (event) {
+        // event.preventDefault();
+        console.log('Button 1 scrolled');
+        // console.log(event.key);
+      });
+    </script>
+  </body>
+</html>
