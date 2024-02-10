@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 500px;
+        height: 500px;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .child {
+        width: 300px;
+        height: 300px;
+        background-color: chocolate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sub-child {
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        <div class="sub-child">Click here</div>
+      </div>
+    </div>
+
+    <button>This is button</button>
+    <script>
+      let parent = document.getElementsByClassName('parent')[0];
+      let child = document.getElementsByClassName('child')[0];
+      let subChild = document.getElementsByClassName('sub-child')[0];
+      let button = document.getElementsByTagName('button')[0];
+      let body = document.getElementsByTagName('body')[0];
+      let html = document.getElementsByTagName('html')[0];
+
+      subChild.addEventListener('click', function (event) {
+        console.log('Sub child clicked');
+        // event.stopPropagation();
+      });
+      child.addEventListener('click', function (event) {
+        console.log('child clicked');
+        button.innerText = 'Changed by mistake';
+        // event.stopPropagation();
+      });
+      parent.addEventListener('click', function (event) {
+        console.log('parent clicked');
+        // event.stopPropagation();
+      });
+      html.addEventListener('click', function (event) {
+        console.log('html clicked');
+        // event.stopPropagation();
+      });
+      body.addEventListener('click', function (event) {
+        console.log('body clicked');
+        button.innerText = 'Changed by mistake';
+        // event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>
