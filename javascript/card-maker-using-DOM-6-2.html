@@ -92,6 +92,56 @@
       </div> -->
     </div>
     <script>
+      let nameList = [
+        'Jay',
+        'Ajay',
+        'Sanjay',
+        'Vijay',
+        'Dinanath',
+        'Chaunhan',
+        'Kancha',
+        'Pathan',
+        'Tiger',
+        'Manoj',
+      ];
+      let languagesList = [
+        'Javascript',
+        'Dart',
+        'PHP',
+        'ruby',
+        'Python',
+        'Java',
+        'HTML',
+        'CSS',
+        'Golang',
+        'Typescript',
+      ];
+      let emailList = [
+        'Jay@developer.dev',
+        'Ajay@developer.dev',
+        'Sanjay@developer.dev',
+        'Vijay@developer.dev',
+        'Dinanath@developer.dev',
+        'Chaunhan@developer.dev',
+        'Kancha@developer.dev',
+        'Pathan@developer.dev',
+        'Tiger@developer.dev',
+        'Manoj@developer.dev',
+      ];
+
+      let imgURLList = [
+        'https://images.pexels.com/photos/3754208/pexels-photo-3754208.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+        'https://images.pexels.com/photos/629936/pexels-photo-629936.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+        'https://images.pexels.com/photos/2373220/pexels-photo-2373220.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+        'https://images.pexels.com/photos/907862/pexels-photo-907862.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+        'https://images.pexels.com/photos/1065090/pexels-photo-1065090.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+        'https://images.pexels.com/photos/819530/pexels-photo-819530.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+        'https://images.pexels.com/photos/1486064/pexels-photo-1486064.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+        'https://images.pexels.com/photos/1486064/pexels-photo-1486064.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+        'https://images.pexels.com/photos/8366854/pexels-photo-8366854.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+        'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      ];
+
       let userData = {
         1: {
           name: 'Nishant',
@@ -229,6 +279,15 @@
       //   userData[4].url
       // );
       console.log(userData[1].email);
+
+      for (count = 0; count < 10; count++) {
+        makeCard(
+          nameList[count],
+          languagesList[count],
+          emailList[count],
+          imgURLList[count]
+        );
+      }
     </script>
   </body>
 </html>
