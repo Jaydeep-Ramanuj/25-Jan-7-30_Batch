@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="username" placeholder="Enter your name" />
+    <button>Submit</button>
+    <script>
+      let username = document.getElementById('username');
+      let submitBtn = document.getElementsByTagName('button')[0];
+      submitBtn.onclick = function () {
+        // console.log(username.value);
+        // console.log(!isNaN(Number(username.value)));
+
+        // NAN -> Not A Number
+
+        try {
+          if (!isNaN(Number(username.value))) {
+            console.log('is Number');
+          } else {
+            console.log('is not Number');
+            throw 'Is not a number';
+          }
+        } catch (err) {
+          console.error(err);
+        }
+      };
+
+      //   a = 10;
+      //   b = 0;
+
+      //   try {
+      //     let call = fetch('something');
+      //   } catch (err) {
+      //     console.error(err);
+      //     // console.log(err);
+      //   }
+
+      //   let result = a / b;
+      //   console.log(result);
+
+      //   try{
+      //   }
+    </script>
+  </body>
+</html>

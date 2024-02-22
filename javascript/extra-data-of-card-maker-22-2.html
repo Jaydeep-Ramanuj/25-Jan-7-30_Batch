@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="card">
+        <img src="" alt="" />
+        <div class="card-info">
+          <div class="name"></div>
+          <div class="post"></div>
+          <div class="email"></div>
+        </div>
+      </div> -->
+    <script>
+      // let nameList = [
+      //   'Jay',
+      //   'Ajay',
+      //   'Sanjay',
+      //   'Vijay',
+      //   'Dinanath',
+      //   'Chaunhan',
+      //   'Kancha',
+      //   'Pathan',
+      //   'Tiger',
+      //   'Manoj',
+      // ];
+      // let languagesList = [
+      //   'Javascript',
+      //   'Dart',
+      //   'PHP',
+      //   'ruby',
+      //   'Python',
+      //   'Java',
+      //   'HTML',
+      //   'CSS',
+      //   'Golang',
+      //   'Typescript',
+      // ];
+      // let emailList = [
+      //   'Jay@developer.dev',
+      //   'Ajay@developer.dev',
+      //   'Sanjay@developer.dev',
+      //   'Vijay@developer.dev',
+      //   'Dinanath@developer.dev',
+      //   'Chaunhan@developer.dev',
+      //   'Kancha@developer.dev',
+      //   'Pathan@developer.dev',
+      //   'Tiger@developer.dev',
+      //   'Manoj@developer.dev',
+      // ];
+
+      // let imgURLList = [
+      //   'https://images.pexels.com/photos/3754208/pexels-photo-3754208.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      //   'https://images.pexels.com/photos/629936/pexels-photo-629936.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      //   'https://images.pexels.com/photos/2373220/pexels-photo-2373220.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      //   'https://images.pexels.com/photos/907862/pexels-photo-907862.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      //   'https://images.pexels.com/photos/1065090/pexels-photo-1065090.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      //   'https://images.pexels.com/photos/819530/pexels-photo-819530.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      //   'https://images.pexels.com/photos/1486064/pexels-photo-1486064.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      //   'https://images.pexels.com/photos/1486064/pexels-photo-1486064.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      //   'https://images.pexels.com/photos/8366854/pexels-photo-8366854.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      //   'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      // ];
+
+      // let userData = {
+      //   1: {
+      //     name: 'Nishant',
+      //     profession: 'Front end',
+      //     email: 'nishant@gmail.dev',
+      //     url: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      //   },
+      //   2: {
+      //     name: 'Dhyanesh',
+      //     profession: 'Front end',
+      //     email: 'dhyanesh@gmail.dev',
+      //     url: 'https://images.pexels.com/photos/997489/pexels-photo-997489.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      //   },
+      //   3: {
+      //     name: 'Milan',
+      //     profession: 'Full stack',
+      //     email: 'milan@gmail.dev',
+      //     url: 'https://images.pexels.com/photos/2128815/pexels-photo-2128815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      //   },
+      //   4: {
+      //     name: 'Rakesh',
+      //     profession: 'Groom',
+      //     email: 'rakesh@gmail.dev',
+      //     url: 'https://images.pexels.com/photos/7855991/pexels-photo-7855991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      //   },
+      // };
+
+      //   makeCard(
+      //     'Milan Kateshiya',
+      //     'Cool Front End Developer',
+      //     'milanCool.developer@gmail.com',
+      //     'https://images.pexels.com/photos/3930111/pexels-photo-3930111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      //   );
+      //   makeCard(
+      //     'Dhyanesh Joshi',
+      //     'Smart Front End Developer',
+      //     'dhyanesh.developer@gmail.com',
+      //     'https://images.pexels.com/photos/11704119/pexels-photo-11704119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      //   );
+      //   makeCard(
+      //     'Rakesh Dangar',
+      //     'Super Smart Front End Developer',
+      //     'rakesh.developer@gmail.com',
+      //     'https://images.pexels.com/photos/2981144/pexels-photo-2981144.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      //   );
+
+      // makeCard(
+      //   userData[1].name,
+      //   userData[1].profession,
+      //   userData[1].email,
+      //   userData[1].url
+      // );
+      // makeCard(
+      //   userData[2].name,
+      //   userData[2].profession,
+      //   userData[2].email,
+      //   userData[2].url
+      // );
+      // makeCard(
+      //   userData[3].name,
+      //   userData[3].profession,
+      //   userData[3].email,
+      //   userData[3].url
+      // );
+      // makeCard(
+      //   userData[4].name,
+      //   userData[4].profession,
+      //   userData[4].email,
+      //   userData[4].url
+      // );
+      // console.log(userData[1].email);
+
+      // for (count = 0; count < 10; count++) {
+      //   makeCard(
+      //     nameList[count],
+      //     languagesList[count],
+      //     emailList[count],
+      //     imgURLList[count]
+      //   );
+      // }
+
+      //   ---------Put it in makeCard Function
+
+      // console.log(newCard);
+
+      // let imgElement = document.createElement('img');
+      // imgElement.setAttribute('src', imgSrc);
+
+      // let cardInfoElement = document.createElement('div');
+      // cardInfoElement.setAttribute('class', 'card-info');
+
+      // let nameElement = document.createElement('div');
+      // nameElement.setAttribute('class', 'name');
+      // nameElement.innerText = reviewerName;
+
+      // let professionElement = document.createElement('div');
+      // professionElement.setAttribute('class', 'post');
+      // professionElement.innerText = reviewerProfession;
+
+      // let emailElement = document.createElement('div');
+      // emailElement.setAttribute('class', 'email');
+      // emailElement.innerText = reviewerEmail;
+
+      // cardInfoElement.append(nameElement);
+      // cardInfoElement.append(professionElement);
+      // cardInfoElement.append(emailElement);
+
+      // newCard.append(imgElement);
+      // newCard.append(cardInfoElement);
+
+      // console.log(newCard);
+    </script>
+  </body>
+</html>
