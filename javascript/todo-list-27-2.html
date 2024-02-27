@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      .todo-list {
+        height: 100px;
+        background-color: whitesmoke;
+      }
+      .todo-list {
+        width: 50%;
+        padding: 10px;
+      }
+      .task-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .task-name {
+        margin-right: auto;
+        margin-left: 15px;
+      }
+      .task-done {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input
+        type="text"
+        name=""
+        id="task"
+        required
+        autocomplete="off"
+        placeholder="Enter your task here"
+      />
+      <select name="" id="" autocomplete="off">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <button>Submit</button>
+    </form>
+    <script>
+      const body = document.getElementsByTagName('body')[0];
+      const submitBtn = document.getElementsByTagName('button')[0];
+      const taskField = document.getElementsByTagName('input')[0];
+      const priorityList = document.getElementsByTagName('select')[0];
+
+      let todoList = document.createElement('div');
+      todoList.classList.add('todo-list');
+
+      body.append(todoList);
+
+      function makeTask(taskTitle, priority = 0) {
+        let taskItem = document.createElement('div');
+        let taskName = document.createElement('div');
+        let taskPriority = document.createElement('div');
+        let taskCheckbox = document.createElement('input');
+
+        taskItem.classList.add('task-item');
+        taskName.classList.add('task-name');
+        taskPriority.classList.add('task-priority');
+        taskCheckbox.classList.add('task-checkbox');
+
+        taskCheckbox.setAttribute('type', 'checkbox');
+        taskCheckbox.setAttribute('onclick', 'markTodo(this)');
+
+        taskName.innerText = taskTitle;
+        if (priority == 1) {
+          taskPriority.innerHTML = `<i class="fa-solid fa-flag"></i>`;
+          taskPriority.style.color = 'red';
+        } else if (priority == 2) {
+          taskPriority.innerHTML = `<i class="fa-solid fa-flag"></i>`;
+          taskPriority.style.color = 'brown';
+        } else if (priority == 3) {
+          taskPriority.innerHTML = `<i class="fa-solid fa-flag"></i>`;
+          taskPriority.style.color = 'green';
+        } else if (priority == 0) {
+          taskPriority.innerHTML = `<i class="fa-solid fa-flag"></i>`;
+          taskPriority.style.color = 'grey';
+        } else {
+          taskPriority.innerText = 'Enter proper value';
+        }
+
+        taskItem.append(taskCheckbox);
+        taskItem.append(taskName);
+        taskItem.append(taskPriority);
+
+        todoList.append(taskItem);
+      }
+
+      function markTodo(element) {
+        let taskName = element.nextElementSibling;
+        taskName.classList.toggle('task-done');
+      }
+
+      submitBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        makeTask(taskField.value, priorityList.value);
+        clearForm();
+      });
+
+      function clearForm() {
+        taskField.value = '';
+      }
+      //   makeTask('Complete this task', 1);
+      //   makeTask('This is second task', 3);
+      //   makeTask('This is third task', 2);
+    </script>
+  </body>
+</html>

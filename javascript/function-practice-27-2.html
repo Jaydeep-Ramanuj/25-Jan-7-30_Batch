@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: whitesmoke;
+        transition: all 300ms;
+      }
+      .dark-mode {
+        background-color: #2b2e31;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Switch Dark mode</button>
+    <script>
+      const body = document.getElementsByTagName('body')[0];
+      const button = document.getElementsByTagName('button')[0];
+
+      let isDarkMode = false;
+
+      function toggleDarkMode() {
+        body.classList.toggle('dark-mode');
+      }
+
+      button.addEventListener('click', toggleDarkMode);
+    </script>
+  </body>
+</html>
