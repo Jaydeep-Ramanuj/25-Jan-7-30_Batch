@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .gfg-card {
+        width: 320px;
+        height: 250px;
+        /* height: min-content; */
+        border-radius: 12px;
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+      }
+      .content {
+        width: 100%;
+        height: 60%;
+        padding: 10px;
+        background-color: #2f2f2f;
+        color: whitesmoke;
+      }
+      img {
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+      }
+      .desc {
+        color: #849897;
+      }
+
+      .card-list {
+        margin: 50px auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="gfg-card">
+      <img src="" alt="" />
+      <div class="content">
+        <div class="title"></div>
+        <div class="desc"></div>
+      </div>
+    </div> -->
+
+    <script>
+      cardData = [
+        {
+          title: 'Create an Animated Social ...',
+          desc: 'Adding animated social media icons using React and Tailwind CSS improve...',
+          url: 'https://media.geeksforgeeks.org/auth-dashboard-uploads/read.png',
+        },
+        {
+          title: 'Explore Practice Problems',
+          desc: 'Solve DSA Problems. Filter based on topic tags and company tags. Get...',
+          url: 'https://media.geeksforgeeks.org/auth-dashboard-uploads/practice.png',
+        },
+        {
+          title: 'DSA in Python - Self Paced',
+          desc: 'Most popular course on DSA trusted by ver 75,000 students! Built with years...',
+          url: 'https://media.geeksforgeeks.org/auth-dashboard-uploads/learn.png',
+        },
+        {
+          title: 'Tech Interview 101- From DSA to System Design for Work...',
+          desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, assumenda?',
+          url: 'https://media.geeksforgeeks.org/img-practice/prod/courses/458/Web/Content/interview-101_1705399030.webp',
+        },
+        {
+          title: 'Data Structures & Algorithms in Python - Self Paced',
+          desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, assumenda?',
+          url: 'https://media.geeksforgeeks.org/img-practice/prod/courses/261/Web/Content/dsa-web_1705410455.webp',
+        },
+      ];
+
+      let cardList = document.createElement('div');
+      cardList.classList.add('card-list');
+      const body = document.getElementsByTagName('body')[0];
+
+      let makeCard = (imgUrl, title, desc) => {
+        let newCard = document.createElement('div');
+        newCard.classList.add('gfg-card');
+
+        const gfgCardTemplate = `  <img src=${imgUrl} alt="" />
+                                   <div class="content">
+                                     <div class="title">${title}</div>
+                                     <div class="desc">${desc}</div>
+                                   </div>
+                                 `;
+        newCard.innerHTML = gfgCardTemplate;
+        cardList.append(newCard);
+        body.append(cardList);
+      };
+
+      //   console.log(cardData[0].url);
+      //   console.log(cardData[0].title);
+      //   console.log(cardData[0].desc);
+
+      for (i = 0; i < 5; i++) {
+        makeCard(cardData[i].url, cardData[i].title, cardData[i].desc);
+      }
+      //   makeCard(cardData[0].url, cardData[0].title, cardData[0].desc);
+    </script>
+  </body>
+</html>
