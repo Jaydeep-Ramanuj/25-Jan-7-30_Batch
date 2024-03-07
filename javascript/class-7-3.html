@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>
+        this
+        <div>this</div>
+      </div>
+    </div>
+    <script>
+      class Car {
+        constructor(brand, modelName) {
+          this.brand = brand;
+          this.modelName = modelName;
+        }
+        printOwnerName(ownerName) {
+          console.log(
+            `${ownerName} has ${this.modelName} of ${this.brand} brand`
+          );
+        }
+
+        set brandName(nameOfBrand) {
+          this.brand = nameOfBrand;
+        }
+
+        get brandName() {
+          return this.brand;
+        }
+      }
+
+      class smallCar extends Car {}
+
+      let car1 = new Car('Tata', 'Punch');
+      let car2 = new Car('Hyundai', 'Verna');
+      let car3 = new Car('Mahindra', 'Thar');
+      //   console.log(car1.brand);
+      //   console.log(car2.brand);
+      car3.printOwnerName('Milan');
+      car2.brandName = 'audi';
+      console.log(car2.brandName);
+
+      console.log(car2.brand);
+
+      //   console.log(this);
+
+      //   console.log(console);
+
+      //   function foo() {
+      //     let a = 10;
+      //     let b = 20;
+      //     function func() {
+      //       function funcc() {
+      //         console.log(this);
+      //       }
+      //       funcc();
+      //     }
+      //     func();
+      //   }
+
+      //   foo();
+
+      class MyArray {
+        numbers = [];
+        constructor(num1, num2) {
+          this.numbers.push(num1);
+          this.numbers.push(num2);
+        }
+
+        indexOF() {
+          console.log('You got your index');
+        }
+      }
+
+      let array1 = new MyArray(10, 20);
+      console.log(array1.numbers);
+
+      array1.indexOF();
+
+      console.log(this);
+
+      a = [];
+      console.log(a);
+
+      let btn = document.getElementsByTagName('div')[0];
+      console.dir(btn);
+
+      obj1 = {
+        name: 'jay',
+        phone: '67465132',
+      };
+
+      console.table(obj1);
+    </script>
+  </body>
+</html>
