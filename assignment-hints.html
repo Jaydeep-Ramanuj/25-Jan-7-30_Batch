@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   //   get current date
+      //   let currentDate = new Date().getDate();
+      //   console.log(currentDate);
+      //   //   get current month
+      //   let currentMonth = new Date().getMonth();
+      //   console.log(currentMonth);
+
+      //   switch (month) {
+      //     case 0:
+      //       31;
+      //     case 1:
+      //       28;
+      //     case 2:
+      //       31;
+      //     case 3:
+      //       30;
+      //   }
+
+      //   daysLeftInCurrentMonth = currentMonthDay - currentDate;
+      //   19 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 25;
+
+      //   .pdf
+      //   .py
+      //   .xlsx
+      //   .html
+      //   .css
+
+      //   fileName = 'index.gitignore';
+      //   //   positionOfDot = fileName.indexOf('.');
+      //   console.log(fileName.slice(fileName.indexOf('.')));
+
+      flag = true;
+
+      //   if (flag) {
+      //     console.log('This will only when flag is true');
+      //   }
+      //   flag && console.log('This will only when flag is true');
+
+      //   flag || console.log('This will only when flag is true');
+
+      //   console.log(true &&  1 && 'hello');
+
+      //   char = 's';
+      //   console.log('aeiouAEIOU'.includes(char));
+
+      //   let VovelsList = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+      //   function checkIfVovelIsPresent(char) {
+      //     let result = false;
+      //     for (i = 0; i < 10; i++) {
+      //       if (VovelsList[i] == char) {
+      //         result = true;
+      //       }
+      //     }
+      //     return result;
+      //   }
+
+      //   if ('abcd....z'.incldes(char)) {
+      //     if ('aeiouAEIOU'.includes(char)) {
+      //       true;
+      //     }
+      //   }
+      //   123456('123456');
+      //   console.log(Array.from('123456'));
+
+      //   numbers = [10, 20, 30, 40, 50];
+      //   console.log(numbers.reverse());
+
+      //   number = '123456';
+      //   console.log(
+      //     Number(number.charAt(0)) + Number(number.charAt(number.length - 1))
+      //   );
+
+      //   acbca;
+
+      currentDay = new Date().getDay();
+
+      currentDate = new Date().getDate();
+      currentMonth = new Date().getMonth() + 1;
+      currentYear = new Date().getFullYear();
+
+      currentHour = new Date().getHours();
+      currentMinute = new Date().getMinutes();
+      console.log(currentDate);
+      console.log(currentMonth);
+      console.log(currentYear);
+      console.log(currentDay);
+      console.log(currentHour);
+      console.log(currentMinute);
+
+      console.log(
+        `Today is ${currentDay}. Current time is ${currentHour}:${currentHour}:${currentMinute}`
+      );
+    </script>
+  </body>
+</html>
