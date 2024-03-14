@@ -83,10 +83,11 @@
       //   acbca;
 
       currentDay = new Date().getDay();
-
       currentDate = new Date().getDate();
-      currentMonth = new Date().getMonth() + 1;
-      currentYear = new Date().getFullYear();
+
+      // currentDate = new Date().getDate();
+      // currentMonth = new Date().getMonth() + 1;
+      // currentYear = new Date().getFullYear();
 
       currentHour = new Date().getHours();
       currentMinute = new Date().getMinutes();
@@ -100,6 +101,24 @@
       console.log(
         `Today is ${currentDay}. Current time is ${currentHour}:${currentHour}:${currentMinute}`
       );
+
+      obj1 = {};
+      obj2 = {};
+
+      obj1Keys = Object.keys(obj1);
+      obj2Values = Object.values(obj1);
+      // for(){
+      //   //
+
+      //   obj1Keys==obj2Values
+      // }
+
+      arrayOfObj = [{}, {}, {}];
+
+      // objEntries= Object.entries(obj1)
+      // outerloop{
+      //   innerloop
+      // }
     </script>
   </body>
 </html>
