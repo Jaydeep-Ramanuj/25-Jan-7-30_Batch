@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      .hide {
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+
+      .box {
+        height: 100px;
+        background-color: tomato;
+        display: none;
+        /* visibility: visible; */
+      }
+
+      /* .parent >.child + .some >.else:nth-child(3) */
+    </style>
+  </head>
+
+  <body>
+    <div class="box">This is box</div>
+    <!-- <button class="btn1">Hide</button>
+    <button class="btn2">Show</button>
+    <button class="btn3">Toggle</button> -->
+
+    <!-- ************* -->
+    <!-- <button class="slideup">Slide Up</button>
+    <button class="slideDown">Slide down</button>
+    <button class="slideToggle">Slide Toggle</button> -->
+
+    <!-- *********** -->
+
+    <button class="fadeIn">fadeIn</button>
+    <button class="fadeOut">fadeOut</button>
+    <button class="fadeTo">fadeTo</button>
+    <button class="fadeToggle">fadeToggle</button>
+    <script>
+      //   document
+      //     .getElementsByTagName('button')[0]
+      //     .addEventListener('click', () => {
+      //       let box = document.getElementsByClassName('box')[0];
+
+      //       if (box.classList.contains('hide')) {
+      //         box.classList.remove('hide');
+      //         box.classList.add('show');
+      //       } else {
+      //         box.classList.remove('show');
+      //         box.classList.add('hide');
+      //       }
+      //     });
+
+      //   ------------
+      //   jQuery
+      //   ------------
+      //   $('.btn1').click(function () {
+      //     $('.box').hide();
+      //   });
+      //   $('.btn2').click(function () {
+      //     $('.box').show();
+      //   });
+      //   $('.btn3').dblclick(function () {
+      //     // $('.box').toggle('slow');
+      //     // $('.box').toggle('fast');
+      //     $('.box').toggle(3000);
+      //   });
+
+      //   ******************
+      //   $(document).ready()
+
+      //   $('.slideup').click(() => {
+      //     $('.box').slideUp();
+      //   });
+      //   $('.slideDown').click(() => {
+      //     $('.box').slideDown();
+      //   });
+      //   $('.slideToggle').click(() => {
+      //     // $('.box').slideToggle('slow');
+      //     // $('.box').slideToggle('fast');
+      //     $('.box').slideToggle(2000);
+      //   });
+
+      //  **************
+
+      $('.fadeIn').click(() => {
+        $('.box').fadeIn();
+      });
+      $('.fadeOut').click(() => {
+        $('.box').fadeOut();
+      });
+      $('.fadeTo').click(() => {
+        $('.box').fadeTo(1000, 0.5);
+      });
+      $('.fadeToggle').click(() => {
+        // $('.box').fadeToggle('slow');
+        // $('.box').fadeToggle('fast');
+        $('.box').fadeToggle(3000);
+      });
+    </script>
+  </body>
+</html>
