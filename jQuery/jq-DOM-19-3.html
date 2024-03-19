@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Document</title>
+    <style>
+      .parent {
+        height: 100px;
+        background-color: wheat;
+        color: yellow;
+      }
+      /* .temp {
+        color: green;
+      } */
+      /* div[name='search-bar'] {
+        color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <div>div without some</div>
+    <div some="else">div with else value of some</div>
+    <div class="parent temp" data-some="search-bar">
+      <i>This is i tag</i>
+    </div>
+
+    <input type="text" />
+
+    <button>Submit</button>
+    <script>
+      //   $('button').click(() => {
+      //     // $('.parent').append('<b>Bold</b>');
+      //     // $('.parent').prepend('<b>Bold</b>');
+      //     // $('.parent').before('<b>Bold</b>');
+      //     // $('.parent').after('<b>Bold</b>');
+      //     // $('.parent').remove();
+      //     $('.parent').empty();
+      //   });
+
+      //   -------------------
+      //   *******************
+      //   -------------------
+
+      //   $('button').click(() => {
+      //     // console.log($('.parent').hasClass('temp'));
+      //     // console.log($('.parent').addClass('temp'));
+      //     // console.log($('.parent').removeClass('temp'));
+      //     console.log($('.parent').toggleClass('temp'));
+      //   });
+
+      //   -------------------
+      //   *******************
+      //   -------------------
+
+      //   $('button').click(() => {
+      //     // console.log($('.parent').html());
+      //     // console.log($('.parent').html('<b>This is b tag</b>'));
+      //     // console.log($('.parent').text());
+      //     // console.log($('.parent').text('This is some random text'));
+      //     // console.log($('input').val());
+      //     // console.log($('input').val('SomeValue'));
+      //     console.log($('input').attr('type', 'password'));
+      //   });
+
+      //   -------------------
+      //   *******************
+      //   -------------------
+
+      //   $('button').click(() => {
+      //     // console.log(
+      //     //   $('.parent').css({ 'background-color': 'red', 'font-size': '1.5rem' })
+      //     // );
+      //     // a: string = 'abc';
+      //     // $('.parent').removeAttr('data-some');
+      //     $('.parent').removeProp('color');
+      //   });
+
+      //   -------------------
+      //   *******************
+      //   -------------------
+
+      //   $('button').click(() => {
+      //     console.log('clicked');
+      //   });
+      //   $('button').hover(() => {
+      //     console.log('hovered');
+      //   });
+      //   $('button').focus(() => {
+      //     console.log('focused');
+      //   });
+      //   $(document).keypress(() => {
+      //     console.log('key pressed');
+      //   });
+      //   $(document).ready(() => {
+      //     console.log('ready');
+      //   });
+      //   $('input').input(() => {
+      //     console.log('changed');
+      //   });
+
+      input = document.getElementsByTagName('input')[0];
+
+      //   input.addEventListener('change', () => {
+      //     console.log(input.value);
+      //   });
+      //   input.addEventListener('input', () => {
+      //     console.log(input.value);
+      //   });
+    </script>
+  </body>
+</html>
+
+<!-- onChange -->
+<!-- onInput -->
