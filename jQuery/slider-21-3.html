@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .parent {
+        width: 500px;
+        height: 200px;
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .child {
+        height: 50px;
+        width: 50px;
+        background-color: yellowgreen;
+        border: 1px solid;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        font-size: 1.2rem;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child">child3</div>
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+    </div>
+    <div class="btns">
+      <button class="left">Left</button>
+      <button class="right">Right</button>
+    </div>
+
+    <script>
+      $('.left').click(() => {
+        slideLeft();
+      });
+      $('.right').click(() => {
+        slideRight();
+      });
+      let leftCounter = 1;
+      let rightCounter = 1;
+      function slideLeft() {
+        console.log('in slideLeft func');
+        children = $('.parent').find('*');
+
+        // children = Array.from($('.parent').find('*'));
+        childrenKeys = Object.keys($('.parent').find('*'));
+        // children = Array.from($('.child'));
+        console.log(children);
+        console.log(children[childrenKeys[1]]);
+        console.log($('.child').eq(0));
+
+        for (i = 0; i < children.length; i++) {
+          $('.child')
+            .eq(i)
+            .css({ transform: `translateX(-${leftCounter * 10}px)` });
+        }
+        leftCounter++;
+      }
+      function slideRight() {}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style></style>
+  </head>
+  <body>
+    <!-- <div class="parent">
+      <div class="child">
+        child
+        <div class="sub-child">
+          sub-child
+          <div class="sub-sub-child1">sub-sub-child1</div>
+          <div class="sub-sub-child2">
+            sub-sub-child2
+            <div class="another-child">another-child</div>
+          </div>
+          <div class="some">some</div>
+          <div class="else">else</div>
+          <div class="else2">else2</div>
+          <div class="else3">else3</div>
+        </div>
+        <div class="sub-child"></div>
+      </div>
+    </div> -->
+
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child some">child3 some</div>
+      <div class="child">child4</div>
+      <div class="child some">child5 some</div>
+    </div>
+
+    <script>
+      //   console.log($('.sub-sub-child').parent());
+      //   console.log($('.sub-sub-child').parents());
+      //   console.log($('.sub-sub-child').parentsUntil('.parent'));
+
+      //-----------------
+
+      //   console.log($('.sub-child').children());
+      //   console.log($('.sub-child').children('.sub-sub-child2'));
+      //   console.log($('.sub-child').find('.another-child'));
+      //   console.log($('.sub-child').find('*'));
+
+      //-----------------
+
+      //   console.log($('.some').siblings());
+      //   console.log($('.some').next());
+      //   console.log($('.some').prev());
+      //   console.log($('.some').nextAll());
+      //   console.log($('.some').prevAll());
+      //   console.log($('.some').nextUntil('.else3'));
+      //   console.log($('.some').prevUntil('.sub-sub-child1'));
+
+      //-----------------
+
+      //   console.log($('.child').first(''));
+      //   console.log($('.child').eq(0));
+      //   console.log($('.child').last());
+      //   console.log($('.child').filter('.some'));
+      console.log($('.child').not('.some'));
+    </script>
+  </body>
+</html>
