@@ -1,0 +1,25 @@
+{
+  "name": "jquery.checkbox.js",
+  "main": "jquery.checkbox.js",
+  "authors": [
+    "iuhoay <iuhoay@gmail.com>"
+  ],
+  "description": "jQuery checkbox",
+  "moduleType": [],
+  "keywords": [
+    "jquery",
+    "checkbox"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/iuhoay/jquery.checkbox",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.3"
+  }
+}
