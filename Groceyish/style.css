@@ -1,0 +1,39 @@
+.cart {
+  height: fit-content;
+}
+
+.content {
+  margin-left: 10px;
+}
+.title {
+  font-size: 14px;
+}
+
+.price {
+  font-size: 12px;
+  color: #40b87b;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+}
+
+.input-group input {
+  background-color: #f1f1f1 !important;
+}
+
+.input-group span {
+  background-color: #40b87b;
+}
+
+.wishlist {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wishlist span {
+  font-size: 13px;
+}
