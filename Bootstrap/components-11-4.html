@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div
+      id="carouselWithControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://images.pexels.com/photos/129208/pexels-photo-129208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            class="d-block w-100"
+            alt="Slide 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.pexels.com/photos/4006143/pexels-photo-4006143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            class="d-block w-100"
+            alt="Slide 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.pexels.com/photos/4006151/pexels-photo-4006151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            class="d-block w-100"
+            alt="Slide 3"
+          />
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselWithControls"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselWithControls"
+        role="button"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+    <!-- ---------------------------- -->
+
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading1">First</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">Second</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-expanded="false"
+            >Dropdown</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#scrollspyHeading3">Third</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#scrollspyHeading4">Fourth</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#scrollspyHeading5">Fifth</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example2"
+      data-bs-offset="0"
+      class="scrollspy-example"
+      tabindex="0"
+    >
+      <h4 id="scrollspyHeading1">First heading</h4>
+      <p>...</p>
+      <h4 id="scrollspyHeading2">Second heading</h4>
+      <p>...</p>
+      <h4 id="scrollspyHeading3">Third heading</h4>
+      <p>...</p>
+      <h4 id="scrollspyHeading4">Fourth heading</h4>
+      <p>...</p>
+      <h4 id="scrollspyHeading5">Fifth heading</h4>
+      <p>...</p>
+    </div>
+
+    <!-- *********************** -->
+
+    <!-- Custom css that makes this example work like it does: -->
+    <style type="text/css">
+      .scrollspy-example-2 {
+        position: relative;
+        height: 350px;
+        overflow: auto;
+      }
+    </style>
+    <div class="row">
+      <div class="col-4">
+        <nav
+          id="nested-navbar-scrollspy"
+          class="navbar navbar-light bg-light flex-column"
+        >
+          <a class="navbar-brand" href="#">Navbar</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link" href="#item-1">Item 1</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+              <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+            </nav>
+            <a class="nav-link" href="#item-2">Item 2</a>
+            <a class="nav-link" href="#item-3">Item 3</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+              <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+            </nav>
+          </nav>
+        </nav>
+      </div>
+      <div class="col-8">
+        <div
+          data-bs-spy="scroll"
+          data-bs-target="#nested-navbar-scrollspy"
+          data-bs-offset="0"
+          tabindex="0"
+          class="scrollspy-example-2"
+        >
+          <h4 id="item-1">Item 1</h4>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Consequuntur assumenda voluptates minima natus, consequatur dolor
+            porro. Facilis dolorem dolor necessitatibus architecto hic iste
+            porro consectetur officia rem velit voluptates expedita, in quia ab
+            nesciunt magnam. Aut cum repellat laudantium eligendi. Debitis quis,
+            ex mollitia consequuntur maxime deleniti atque beatae omnis iste
+            excepturi iusto inventore tenetur autem ipsum placeat vero modi
+            neque quibusdam architecto id? Placeat soluta, enim, vero blanditiis
+            iusto ad aperiam hic a atque delectus impedit, in repellat molestiae
+            nulla libero sit? Iste corrupti quisquam cumque eveniet iure error
+            voluptatum quasi incidunt, maiores quam blanditiis repellat, in sint
+            neque.
+          </p>
+          <h5 id="item-1-1">Item 1-1</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Recusandae, nihil sed id nostrum possimus iste commodi!
+            Necessitatibus, magni, est cupiditate animi voluptas sequi sapiente
+            dolor ullam voluptatem assumenda tempore. Natus necessitatibus
+            aliquid, reiciendis assumenda officiis doloribus nam eaque. Eum
+            magni eos odio vel cum magnam, tenetur iusto esse illum voluptate
+            possimus, dolorem quos alias, suscipit porro at ratione quasi
+            repellendus facilis dolor eligendi a! Maxime, aliquam earum,
+            suscipit labore sint, repellat minus doloremque rerum beatae ratione
+            quas fugiat iste eum veritatis quod modi quae quasi adipisci ullam
+            nobis nam? Quae, asperiores. Cumque architecto doloremque blanditiis
+            quas ad aut temporibus eum.
+          </p>
+          <h5 id="item-1-2">Item 1-2</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
+            distinctio earum qui eius ducimus ab ratione culpa aspernatur error
+            repellendus! Possimus facere aliquam architecto, quam tenetur nemo,
+            magnam aut quidem laborum quae vel, totam libero? Quos in aperiam
+            consequatur provident nesciunt pariatur ipsa, illo nemo aut fuga
+            porro, architecto maiores. Cupiditate, qui tempore. Vero porro
+            delectus assumenda quia neque tempora unde debitis voluptates fuga?
+            Reprehenderit neque iure id voluptate quam deserunt officiis minima,
+            eligendi accusamus labore porro, sapiente repudiandae debitis beatae
+            est non quia culpa incidunt excepturi praesentium distinctio
+            voluptas iste! Enim, autem porro quod cum similique ab at hic.
+          </p>
+          <h4 id="item-2">Item 2</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam,
+            quo. Odio veniam dicta fugiat nobis sed suscipit quos eos quaerat
+            molestiae atque rem distinctio sit consectetur nemo quia
+            reprehenderit nesciunt exercitationem harum ipsum aliquam, alias
+            necessitatibus eum ullam! Sit quibusdam, fugiat quos sapiente
+            pariatur ipsam ipsum esse nostrum voluptatem, ipsa neque, cumque a
+            aspernatur. Eveniet itaque dicta, saepe explicabo dignissimos
+            corrupti ab ipsa quod minus repellendus obcaecati id, consectetur
+            distinctio fugiat sequi nulla numquam magnam voluptatum veniam? Aut
+            praesentium omnis asperiores iure tenetur mollitia repudiandae
+            excepturi sapiente voluptatem exercitationem, voluptate dolorum?
+            Omnis eveniet natus, nemo vel aliquam vitae dignissimos. Sapiente!
+          </p>
+          <h4 id="item-3">Item 3</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            architecto consequuntur voluptatem voluptatum debitis quidem ipsum!
+            Vel repellat aspernatur quod delectus? Assumenda iusto beatae
+            pariatur tenetur aliquam veritatis modi unde repudiandae voluptates
+            laudantium perferendis maxime necessitatibus inventore rem earum
+            quasi dolor dolore sapiente nemo cum voluptate, ut quibusdam culpa
+            facilis! Reprehenderit accusantium neque ipsum autem! Officia
+            impedit libero aspernatur placeat atque a eos, aperiam aut incidunt
+            fugit cum minus quasi numquam dolor eius adipisci earum sunt iste
+            quos distinctio mollitia sint id optio vel? Et nesciunt expedita ad
+            nemo tempora provident doloremque. Voluptatibus iste ad, autem
+            eligendi saepe blanditiis aut!
+          </p>
+          <h5 id="item-3-1">Item 3-1</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            tempore culpa voluptatibus nostrum ut nulla mollitia. Nisi
+            dignissimos unde adipisci dolorum suscipit nesciunt maxime ducimus
+            iusto et quos modi provident nihil, magni commodi facilis, omnis at,
+            error eius. Labore, ipsam! Perspiciatis molestiae rem ipsam
+            consequuntur voluptatibus quia non consectetur, enim, nisi eum
+            impedit? Eligendi minima iste minus perspiciatis quo enim,
+            dignissimos culpa reiciendis optio nisi, corporis aliquam iusto
+            corrupti laborum. Expedita, eum quibusdam explicabo, harum
+            perferendis optio placeat perspiciatis earum delectus animi, beatae
+            corporis fugit repudiandae dicta voluptate iste. Tenetur aspernatur
+            quaerat ab impedit dignissimos reiciendis atque iure pariatur earum!
+          </p>
+          <h5 id="item-3-2">Item 3-2</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
+            numquam quidem, fugit accusantium magnam quod tenetur et libero
+            aliquam quibusdam corporis minus. Unde illum nisi labore omnis
+            numquam esse impedit minima facere quam doloribus illo suscipit
+            deleniti commodi facilis perspiciatis quasi animi dolore libero,
+            sequi reprehenderit doloremque accusantium magnam aut. Vel quaerat
+            voluptatibus ab consectetur blanditiis facilis repellendus
+            voluptatum consequatur beatae illum ratione pariatur mollitia
+            deleniti quisquam expedita ea doloremque sint, dignissimos quo
+            commodi sed. Earum omnis blanditiis officiis odit magnam quo facere
+            voluptate aliquam ut dignissimos dolore sequi, voluptas quod
+            corrupti sed doloribus porro quaerat, fugit accusantium
+            reprehenderit fugiat!
+          </p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
