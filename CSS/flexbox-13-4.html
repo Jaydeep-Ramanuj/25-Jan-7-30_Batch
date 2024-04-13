@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        /* width: 500px; */
+        width: 100%;
+        height: 500px;
+        background-color: bisque;
+        margin: 50px auto;
+        display: flex;
+        /* justify-content: start; */
+        /* justify-content: end; */
+        /* justify-content: center; */
+        /* justify-content: space-around; */
+        /* justify-content: space-evenly; */
+        /* justify-content: space-between; */
+
+        /* align-items: start; */
+        /* align-items: end; */
+        /* align-items: center; */
+        /* align-items: stretch; */
+        /* align-items: baseline; */
+
+        /* flex-wrap: nowrap; */
+        /* flex-wrap: wrap; */
+        /* flex-wrap: wrap-reverse; */
+
+        /* align-content: start; */
+        /* gap: 10px; */
+        /* gap: 10px 30px; */
+        /* row-gap: 20px; */
+        /* column-gap: 30px; */
+      }
+      .child {
+        width: 50px;
+        height: 50px;
+        background-color: yellowgreen;
+        border: 1px solid;
+      }
+
+      .child:nth-child(1) {
+        /* order: 1; */
+        /* align-self: flex-end; */
+        flex-grow: 1;
+      }
+      .child:nth-child(2) {
+        /* order: 2; */
+        /* flex-basis: 200px; */
+        flex-grow: 2;
+      }
+      .child:nth-child(3) {
+        /* order: 1; */
+        flex-grow: 3;
+        flex-shrink: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <!-- <div class="child">4</div>
+      <div class="child">5</div> -->
+      <!-- <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div> -->
+    </div>
+  </body>
+</html>
