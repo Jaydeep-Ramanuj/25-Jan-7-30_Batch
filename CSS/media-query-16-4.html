@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      .card {
+        /* width: 300px; */
+        /* height: 450px; */
+        min-width: 250px;
+        max-width: 300px;
+        height: fit-content;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .img-div {
+        /* padding: 10px; */
+        height: 30%;
+        width: 100%;
+        background-color: #653bf7;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        outline: 5px solid #6737fe;
+        margin-top: 50px;
+        /* box-shadow: 0 0 5px 5px whitesmoke; */
+      }
+      .card-content {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+        padding-bottom: 10px;
+      }
+
+      .fa-brands {
+        font-size: 1.8rem;
+        color: rgb(194, 193, 193);
+      }
+
+      .socials,
+      .stats {
+        display: flex;
+      }
+
+      .btns {
+        display: flex;
+        gap: 20px;
+      }
+      .msg-btn,
+      .sub-btn {
+        padding: 5px 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: #6737fe;
+        color: whitesmoke;
+      }
+      .icon {
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        background-color: rebeccapurple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .socials {
+        gap: 15px;
+      }
+
+      .stats {
+        gap: 10px;
+      }
+
+      .icon:nth-child(1) {
+        background-color: #5956b7;
+      }
+      .icon:nth-child(2) {
+        background-color: #5182f2;
+      }
+      .icon:nth-child(3) {
+        background-color: #d02468;
+      }
+      .icon:nth-child(4) {
+        background-color: #e72100;
+      }
+      .card-list {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-list">
+      <div class="card">
+        <div class="img-div">
+          <img
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+        </div>
+        <div class="card-content">
+          <div class="username">CodingLab</div>
+          <div class="profession">YouTuber and Blogger</div>
+          <div class="socials">
+            <div class="icon">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="sub-btn">Subscribe</button>
+            <button class="msg-btn">Message</button>
+          </div>
+          <div class="stats">
+            <div class="matrix"><i class="fa-regular fa-heart"></i> 60.4K</div>
+            <div class="matrix"><i class="fa-regular fa-comment"></i> 20K</div>
+            <div class="matrix"><i class="fa-solid fa-share"></i> 12.4K</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img-div">
+          <img
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+        </div>
+        <div class="card-content">
+          <div class="username">CodingLab</div>
+          <div class="profession">YouTuber and Blogger</div>
+          <div class="socials">
+            <div class="icon">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="sub-btn">Subscribe</button>
+            <button class="msg-btn">Message</button>
+          </div>
+          <div class="stats">
+            <div class="matrix"><i class="fa-regular fa-heart"></i> 60.4K</div>
+            <div class="matrix"><i class="fa-regular fa-comment"></i> 20K</div>
+            <div class="matrix"><i class="fa-solid fa-share"></i> 12.4K</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img-div">
+          <img
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+        </div>
+        <div class="card-content">
+          <div class="username">CodingLab</div>
+          <div class="profession">YouTuber and Blogger</div>
+          <div class="socials">
+            <div class="icon">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="sub-btn">Subscribe</button>
+            <button class="msg-btn">Message</button>
+          </div>
+          <div class="stats">
+            <div class="matrix"><i class="fa-regular fa-heart"></i> 60.4K</div>
+            <div class="matrix"><i class="fa-regular fa-comment"></i> 20K</div>
+            <div class="matrix"><i class="fa-solid fa-share"></i> 12.4K</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img-div">
+          <img
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+        </div>
+        <div class="card-content">
+          <div class="username">CodingLab</div>
+          <div class="profession">YouTuber and Blogger</div>
+          <div class="socials">
+            <div class="icon">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="sub-btn">Subscribe</button>
+            <button class="msg-btn">Message</button>
+          </div>
+          <div class="stats">
+            <div class="matrix"><i class="fa-regular fa-heart"></i> 60.4K</div>
+            <div class="matrix"><i class="fa-regular fa-comment"></i> 20K</div>
+            <div class="matrix"><i class="fa-solid fa-share"></i> 12.4K</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
