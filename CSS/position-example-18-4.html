@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      :root {
+        --card-info-bcg: #241b39;
+        --card-skills-bcg: #211636;
+        --text-color: #8494b6;
+        --btn-color: #2bbecb;
+        --btn-color-light: #2bbecbb5;
+      }
+
+      .card {
+        width: 300px;
+        margin: 100px auto;
+        border-radius: 12px;
+        color: var(--text-color);
+        overflow: hidden;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        transition: all 300ms;
+        position: relative;
+      }
+
+      .card-info {
+        padding: 10px;
+        padding-top: 20px;
+        background-color: var(--card-info-bcg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        outline: 3px solid var(--btn-color);
+        outline-offset: 5px;
+        margin-bottom: 10px;
+        transition: all 300ms;
+        filter: brightness(75%);
+      }
+
+      img:hover {
+        outline-offset: 10px;
+        filter: brightness(100%);
+      }
+
+      .name {
+        font-size: 1.8rem;
+      }
+
+      .name,
+      .profession,
+      .city {
+        transition: all 300ms;
+      }
+      .name:hover,
+      .profession:hover,
+      .city:hover {
+        color: rgba(245, 245, 245, 0.722);
+      }
+      .btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .msg-btn,
+      .following-btn {
+        color: rgba(0, 0, 0, 0.846);
+        padding: 3px 8px;
+        border-radius: 5px;
+      }
+
+      .msg-btn {
+        background-color: var(--btn-color);
+        border: 2px solid transparent;
+      }
+      .msg-btn:hover {
+        border: 2px solid var(--btn-color);
+        background-color: transparent;
+        color: var(--btn-color);
+        transition: all 300ms;
+
+        box-shadow: var(--btn-color-light) 0px 1px 10px,
+          var(--btn-color-light) 0px 3px 20px,
+          var(--btn-color-light) 0px 5px 30px;
+      }
+
+      .following-btn {
+        border: 2px solid var(--btn-color);
+        color: var(--btn-color);
+        transition: all 300ms;
+      }
+      .following-btn:hover {
+        background-color: var(--btn-color);
+        border: 2px solid transparent;
+        color: rgba(0, 0, 0, 0.846);
+      }
+
+      .skills {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        background-color: var(--card-skills-bcg);
+        padding: 10px;
+      }
+
+      .skill-pill {
+        border: 1px solid var(--text-color);
+        border-radius: 3px;
+        padding: 3px 5px;
+        font-size: 0.8rem;
+      }
+      .skill-pill:hover {
+        transform: translateY(-3px);
+        color: whitesmoke;
+        transition: all 300ms;
+        cursor: pointer;
+
+        box-shadow: rgba(128, 128, 128, 0.502) 0px 10px 60px;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      .card:hover .card-info {
+        background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHRyOTVsOGJpaXNvdmJ3MG94Y2o4cXEzYWk2N3Z6a3h6ZDdyMjJkNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/3ohhwzIw3bISRhQWME/giphy.gif);
+        background-position: center;
+      }
+      .pro {
+        width: fit-content;
+        padding: 3px 8px;
+        border-radius: 5px;
+        background-color: orangered;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-info">
+        <!-- <img
+          src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        /> -->
+        <img
+          src="https://images.pexels.com/photos/3638045/pexels-photo-3638045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+        <div class="name">Sushil</div>
+        <div class="city">Rajkot</div>
+        <div class="profession">Full stack developer</div>
+        <div class="btns">
+          <div class="msg-btn">Message</div>
+          <div class="following-btn">Following</div>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="skill-pill">Front end</div>
+        <div class="skill-pill">Back end</div>
+        <div class="skill-pill">Database</div>
+        <div class="skill-pill">HTML/HTML5</div>
+        <div class="skill-pill">CSS/CSS3</div>
+        <div class="skill-pill">Javascript</div>
+        <div class="skill-pill">jQuery</div>
+        <div class="skill-pill">React</div>
+        <div class="skill-pill">Node</div>
+        <div class="skill-pill">MongoDB</div>
+      </div>
+      <div class="pro">Pro</div>
+    </div>
+  </body>
+</html>

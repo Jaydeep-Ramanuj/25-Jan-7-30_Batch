@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .spacer {
+        height: 2000px;
+      }
+      .parent {
+        width: 1200px;
+        height: 1000px;
+        border: 1px solid black;
+        display: flex;
+        margin: 50px auto;
+        position: relative;
+      }
+
+      img {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      img:nth-child(2) {
+        position: relative;
+        top: 250px;
+        left: 200px;
+        /* bottom: 200px; */
+        /* right: 300px; */
+      }
+      img:nth-child(3) {
+        position: absolute;
+        top: -50px;
+        left: -30px;
+        z-index: 5;
+      }
+
+      img:nth-child(1) {
+        position: sticky;
+        top: 100px;
+        z-index: 3;
+      }
+      img:nth-child(4) {
+        position: fixed;
+        top: 100px;
+        right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <!-- <img
+        src="https://images.pexels.com/photos/9978792/pexels-photo-9978792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      /> -->
+      <img
+        src="https://images.pexels.com/photos/14525782/pexels-photo-14525782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/3829446/pexels-photo-3829446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/3829441/pexels-photo-3829441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/125779/pexels-photo-125779.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+    </div>
+    <div class="spacer"></div>
+  </body>
+</html>
+
+<!-- static -->
+<!-- relative -->
+<!-- absolute -->
+<!-- sticky -->
+<!-- fixed -->
