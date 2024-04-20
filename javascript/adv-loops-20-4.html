@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+      function doSquare(num) {
+        return num * num;
+      }
+
+      function checkNegative(num) {
+        return num < 50 ? true : false;
+      }
+
+      //   numbers.forEach((item) => {
+      //     console.log(doSquare(item));
+      //   });
+
+      for (number of numbers) {
+        console.log(number);
+      }
+
+      for (number in numbers) {
+        console.log(number);
+      }
+
+      //   map
+      //   console.log(numbers.filter((number) => checkNegative(number)));
+      //   console.log(numbers.map((number) => doSquare(number)));
+
+      numbers.map(function (num) {
+        console.log(doSquare(num));
+      });
+      //   console.log(numbers.filter((number) => (number < 50 ? true : false)));
+      //   console.log(numbers.reduce((result, curr) => (result = result + curr)));
+    </script>
+  </body>
+</html>
